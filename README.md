@@ -1,47 +1,29 @@
-[![GitHub Issues](https://img.shields.io/github/issues/Ozencb/tilde-enhanced)](https://github.com/Ozencb/tilde-enhanced/issues)
-[![Stars](https://img.shields.io/github/stars/Ozencb/tilde-enhanced)](https://github.com/Ozencb/tilde-enhanced)
-[![Forks](https://img.shields.io/github/forks/Ozencb/tilde-enhanced)](https://github.com/Ozencb/tilde-enhanced)
-[![Unlicense](https://img.shields.io/github/license/Ozencb/tilde-enhanced)](../master/LICENSE)
+## Tweaking and Opinionated Purpose
 
-# Tilde Enhanced
-
-Based on [Cade Scroggins](https://github.com/cadejscroggins)'s [Tilde](https://github.com/cadejscroggins/tilde).
+While you can change it in [config.js](js/config.js), you might find it lacking since, slowly, customization is being depleted. Why? I use NixOS, a *declarative* system. My personal setup references this repository. It is easier to mantain if I have less to.
 
 ## Screenshots 
 
-![Screenshot](assets/screenshot.png)
-
-
-## Added Features
-Most of the features are carried over from the original source.
-Few of the added features are:
-
-- A launch category functionality, which launches every site in a category. Enter a category index number followed by `!`, i.e. `2!` would launch everything under the second category. 
-- A "Quick Launch" functionality, which launches every site with `quickLaunch` property set to `true` upon entering `q!`.
-- An invertible color theme. Either edit config or use `invert!` command.
-- Show image or SVG as bookmark icon
-- An option to show launch keys instead of icons. Either edit config or type `keys!`.
+![Screenshot1](assets/screenshot1.png)
+![Screenshot1](assets/screenshot2.png)
 
 ## Usage
 
-To use Tilde as your homepage, simply set your browser's home URL to
-Tilde's index file.
+To use Homepage as yourself, simply set your browser's home URL to
+Homepage's index file.
 To go to a site, enter the first letter of the site then hit enter.
-To view the available sites, press `?` or click on the clock.
+To view the available sites, press `?` or click on the homedir.
 If your input doesn't match any of the commands,
-a generic DuckDuckGo search will be triggered. For example:
+a generic DuckDuckGo HTML search will be triggered. For example:
 
 - Entering `r` would redirect you to [www.reddit.com](https://www.reddit.com).
-- Entering `t` would redirect you to [twitch.tv](https://www.twitch.tv).
-- Entering `cats` would search [Cats](https://duckduckgo.com/?q=cats).
+- Entering `w` would redirect you to [Whatsapp Web](https://web.whatsapp.com).
+- Entering `cats` would search [Cats](https://html.duckduckgo.com/html/?q=cats).
 
 Note that by default, queries are searched on DuckDuckGo but this can be
 configured easily by updating two lines on. Check [Configuration](#configuration) for details.
 
 You might have to allow pop-ups for your homepage to use quick launch feature.
-
-This version is not suitable for use on mobile as clicking on the clock will
-only bring up pre-defined sites.
 
 ### Searching
 
@@ -51,7 +33,7 @@ by your search query. For example:
 - Entering `g:tilde-enhanced` would search
   [GitHub for tilde-enhanced](https://github.com/search?q=tilde-enhanced).
 - Entering `y:cats` would search
-  [Cats on YouTube](https://www.youtube.com/results?search_query=cats).
+  [Cats on Invidious](https://inv.nadeko.net/search?q=cats).
 
 ### Specific Locations
 
@@ -61,8 +43,6 @@ For example:
 
 - Entering `r/r/startpages` would redirect you to
   [www.reddit.com/r/startpages](https://www.reddit.com/r/startpages)
-- Entering `h/popular` would redirect you to
-  [hypem.com/popular](http://hypem.com/popular).
 
 ### URL Redirects
 
@@ -83,11 +63,7 @@ Additionally, you can pass any query via the `q` query param. For example:
 - Going to `file:///path/to/tilde/index.html?q=cats` would search
   [Cats](https://duckduckgo.com/?q=cats).
 
-This allows you to invoke Tilde with your native browser search bar.
-
-## Configuration
-
-Open up the [config.js](js/config.js) file and read through the `CONFIG`!
+This allows you to invoke Homepage with your native browser search bar.
 
 ## Setting it up for new tabs on Firefox
 
@@ -97,4 +73,11 @@ You can follow [Urimu's Guide](https://github.com/Urimu/Startpage#setting-it-up-
 
 ## License
 
-Feel free to [use this and modify it however you like](https://github.com/Ozencb/tilde-enhanced/blob/master/LICENSE).
+To honor Ozencb, the OG creator of this marvelous web page, I'm keeping the [Unlicense](https://github.com/notawyvern/tilde-enhanced/blob/master/LICENSE). So feel free to steal with a legal wrath.
+
+# Gratitude List
+
+Homepage is largely based on [tilde-enhanced](https://github.com/ozencb/tilde-enhanced). That means without the following people, it wouldn't exist. So thank you!
+
+[Cade Scroggins](https://github.com/cadejscroggins)
+[ozencb](https://github.com/ozencb)
