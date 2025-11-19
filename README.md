@@ -5,6 +5,7 @@ While you can change it in [config.js](js/config.js), you might find it lacking 
 ## Screenshots 
 
 ![Screenshot1](assets/screenshot1.png)
+
 ![Screenshot1](assets/screenshot2.png)
 
 ## Usage
@@ -25,7 +26,7 @@ configured easily by updating two lines on. Check [Configuration](#configuration
 
 You might have to allow pop-ups for your homepage to use quick launch feature.
 
-### Searching
+## Searching
 
 You can search any of the sites by typing a colon after the site's key, followed
 by your search query. For example:
@@ -35,7 +36,7 @@ by your search query. For example:
 - Entering `y:cats` would search
   [Cats on Invidious](https://inv.nadeko.net/search?q=cats).
 
-### Specific Locations
+## Specific Locations
 
 You can go to a specific location on a site by typing a forward slash after the
 site's key, followed by the location on the site you'd like to be redirected to.
@@ -44,7 +45,7 @@ For example:
 - Entering `r/r/startpages` would redirect you to
   [www.reddit.com/r/startpages](https://www.reddit.com/r/startpages)
 
-### URL Redirects
+## URL Redirects
 
 If you enter in a full domain or URL, you will be redirected to said domain or
 URL. For example:
@@ -56,7 +57,7 @@ URL. For example:
 
 You can also use `Ctrl + Enter` key combination to launch the query with a `.com` TLD.
 
-### Query Paramater
+## Query Paramater
 
 Additionally, you can pass any query via the `q` query param. For example:
 
@@ -75,9 +76,10 @@ You can follow [Urimu's Guide](https://github.com/Urimu/Startpage#setting-it-up-
 
 To honor Ozencb, the OG creator of this marvelous web page, I'm keeping the [Unlicense](https://github.com/notawyvern/tilde-enhanced/blob/master/LICENSE). So feel free to steal with a legal wrath.
 
-# Gratitude List
+## Gratitude List
 
 Homepage is largely based on [tilde-enhanced](https://github.com/ozencb/tilde-enhanced). That means without the following people, it wouldn't exist. So thank you!
 
 [Cade Scroggins](https://github.com/cadejscroggins)
+
 [ozencb](https://github.com/ozencb)
