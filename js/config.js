@@ -7,10 +7,10 @@ const CONFIG = {
    * Update line 11 and 13 if you prefer using Google.
    */
   commands: [{
-      name: 'Brave',
+      name: 'DuckDuckGo',
       key: '*',
-      url: 'https://search.brave.com',
-      search: '/search?q={}'
+      url: 'https://html.duckduckgo.com',
+      search: '/html/?q={}'
     },
     {
       category: 'Pessoal',
