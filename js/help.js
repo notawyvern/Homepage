@@ -11,10 +11,8 @@ class Help {
       this._inputEl = $.el('#search-input');
       this._inputElVal = '';
       this._suggester = options.suggester;
-      this._invertColors = options.invertedColors;
       this._buildAndAppendLists();
       this._registerEvents();
-      this._invertValue;
     }
   
     toggle(show) {
@@ -73,20 +71,16 @@ class Help {
     }
   
     _buildListCommands(currentCategory) {
-      let invertValue = this._invertColors ? 1: 0;
-  
-      const bgcolor = invertValue ? getComputedStyle(document.documentElement).getPropertyValue('--foreground') 
-                                  : getComputedStyle(document.documentElement).getPropertyValue('--background');
-  
-      const fgcolor = invertValue ? getComputedStyle(document.documentElement).getPropertyValue('--background') 
-                                  : getComputedStyle(document.documentElement).getPropertyValue('--foreground');
-  
-  
+
+      const bgcolor = getComputedStyle(document.documentElement).getPropertyValue('--background')
+      const fgcolor = getComputedStyle(document.documentElement).getPropertyValue('--foreground') 
       const commandListWithIcons =  this._commands
-        .map(({ category, name, key, url, icon }, i) => {
-          const iconEl = CONFIG.iconExtension !== 'svg'
-                       ? `<img src='assets/icons/${icon}.png' height = 28px center style="filter: invert(${invertValue});">`
-                       : `<img src='assets/icons/${icon}.svg' onload="SVGInject(this)" height = 28px center style="fill: ${fgcolor};">`
+        .map(({ category, name, key, url, icon }, i) => { 
+	  // the 1 boolean came with the OG's homepage code, since it has dark-light
+	  // color inverting. icons need it for legacy reasons. which may be removed 
+	  // by manually inverting all png icons, a time consuming unneeded task
+          const iconEl = CONFIG.iconExtension =
+			`<img src='assets/icons/${icon}.png' height = 28px center style="filter: invert(1);">`
   
           if (category === currentCategory) {
             return `

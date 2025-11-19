@@ -1,7 +1,3 @@
-// Get invertedColors preference from cookies
-CONFIG.invertedColors = localStorage.getItem('invertColorCookie') ?
-  JSON.parse(localStorage.getItem('invertColorCookie')) :
-  CONFIG.invertedColors;
 
 // Get showKeys preference from cookies
 CONFIG.showKeys = localStorage.getItem('showKeysCookie') ?
@@ -40,12 +36,10 @@ const help = new Help({
   commands: CONFIG.commands,
   newTab: CONFIG.newTab,
   suggester,
-  invertedColors: CONFIG.invertedColors,
   showKeys: CONFIG.showKeys
 });
 
 const form = new Form({
-  colors: CONFIG.colors,
   instantRedirect: CONFIG.instantRedirect,
   newTab: CONFIG.newTab,
   parseQuery: queryParser.parse,
@@ -53,7 +47,6 @@ const form = new Form({
   toggleHelp: help.toggle,
   quickLaunch: help.launch,
   categoryLaunch: help.launchCategory,
-  invertedColors: CONFIG.invertedColors,
   showKeys: CONFIG.showKeys
 });
 

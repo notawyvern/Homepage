@@ -1,6 +1,5 @@
 class Form {
     constructor(options) {
-      this._colors = options.colors;
       this._formEl = $.el('#search-form');
       this._inputEl = $.el('#search-input');
       this._inputElVal = '';
@@ -18,12 +17,10 @@ class Form {
       this._previewValue = this._previewValue.bind(this);
       this._submitForm = this._submitForm.bind(this);
       this._submitWithValue = this._submitWithValue.bind(this);
-      this._invertColors = options.invertedColors;
       this.hide = this.hide.bind(this);
       this.show = this.show.bind(this);
       this._registerEvents();
       this._loadQueryParam();
-      this.invert();
       this.isCtrlEnter = false;
     }
   
@@ -38,22 +35,6 @@ class Form {
     show() {
       $.bodyClassAdd('form');
       this._inputEl.focus();
-    }
-  
-    invert() {
-      if (this._invertColors) {
-        const bgcolor = getComputedStyle(document.documentElement).getPropertyValue('--background');
-        const fgcolor = getComputedStyle(document.documentElement).getPropertyValue('--foreground');
-        document.documentElement.style.setProperty('--background', fgcolor);
-        document.documentElement.style.setProperty('--foreground', bgcolor);    
-      }
-    }
-  
-    _invertConfig() {
-      let isInverted = !CONFIG.invertedColors;
-      localStorage.removeItem('invertColorCookie');
-      localStorage.setItem('invertColorCookie', JSON.stringify(isInverted));
-      location.reload();
     }
   
     _showKeysConfig() {
@@ -146,11 +127,6 @@ class Form {
         this._suggester.setOnHighlight(this._previewValue);
         this._suggester.setOnUnhighlight(this._clearPreview);
       }
-    }
-  
-    _setBackgroundFromQuery(query) {
-      if (!this._colors) return;
-      this._formEl.style.background = this._parseQuery(query).color;
     }
   
     _submitForm(e) {

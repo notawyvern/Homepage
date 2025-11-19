@@ -208,16 +208,6 @@ const CONFIG = {
   newTab: false,
 
   /**
-   * Dynamic overlay background colors when command domains are matched.
-   */
-  colors: true,
-
-  /**
-   * Invert color theme
-   */
-  invertedColors: true,
-
-  /**
    * Show keys instead of icons
    */
   showKeys: false,
