@@ -76,11 +76,8 @@ class Help {
       const fgcolor = getComputedStyle(document.documentElement).getPropertyValue('--foreground') 
       const commandListWithIcons =  this._commands
         .map(({ category, name, key, url, icon }, i) => { 
-	  // the 1 boolean came with the OG's homepage code, since it has dark-light
-	  // color inverting. icons need it for legacy reasons. which may be removed 
-	  // by manually inverting all png icons, a time consuming unneeded task
           const iconEl = CONFIG.iconExtension =
-			`<img src='assets/icons/${icon}.png' height = 28px center style="filter: invert(1);">`
+			`<img src='assets/icons/${icon}.png' height = 28px center;">`
   
           if (category === currentCategory) {
             return `

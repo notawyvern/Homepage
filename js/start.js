@@ -3,6 +3,6 @@ class Menu {
       this._el = $.el('#start');
       this._delimiter = options.delimiter;
       this._el.addEventListener('click', options.toggleHelp);
-      this._el.textContent = "/home/crh";
+      this._el.textContent = "~+";
     }
 }
