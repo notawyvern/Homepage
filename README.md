@@ -6,7 +6,7 @@ You can change it in [config.js](js/config.js), but features are few. Why? I use
 
 ### Dependencies
 
-To work out of the box, the DepartureMono Nerd Font should be installed. The Tao symbol button needs NF to render it. You can modify the icon in [ui.sh](./js/ui.sh) and the font in [style.css](./css/style.css).
+To work out of the box, the DepartureMono Nerd Font should be installed. The Tao symbol button needs NF to render it. You can modify the icon in [ui.js](./js/ui.js) and the font in [style.css](./css/style.css).
 
 ## Screenshots 
 
